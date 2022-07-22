@@ -9,6 +9,7 @@ chars = ["A", "B", "C", "D", "E", "F", "?", "G", "H", "I", "J", "K", "L", "M",
 "N", "O", "P", "&", "Q", "R", "S", "T", "U", "*", "V", "W", "X", "Y", "Z",
  "!", "@", "#", "$", "%", "^", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0"]
 
+
 def generate():
     Password_Entry.delete(0, END)
     password = ""
@@ -55,7 +56,7 @@ def load_data(file):
     global Data
     try:
         Data = json.load(open(file))
-        print(Data)
+        # print(Data)
     except:
         pass
 
@@ -97,7 +98,7 @@ Search_Button.grid(column=2, row=1)
 
 Email_Label = Label(text="Email/Username:", padx=20)
 Email_Entry = Entry(width=52)
-Email_Entry.insert(0,"newjoker6@gmail.com")
+Email_Entry.insert(0,"")
 Email_Label.grid(column=0, row=2)
 Email_Entry.grid(column=1, row=2, columnspan=2)
 
